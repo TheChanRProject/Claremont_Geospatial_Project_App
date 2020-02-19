@@ -6,11 +6,11 @@ from os import getcwd, listdir
 from time import sleep
 
 # Data Path
-data_path = getcwd() + "/geospatial_project/data/csv"
+data_path = "school_coordinates.csv"
 
 st.title("ChanR Analytics Presents: Geospatial Exploration with Schools")
 
-nr = nearest_restaurants(f"{data_path}/{listdir(data_path)[0]}")
+nr = nearest_restaurants(f"{data_path}") 
 
 st.write("## Objectives: ")
 
@@ -77,4 +77,4 @@ if st.button("Final Results"):
     st.write(final_results[school_option])
 
 st.write("### Visualizing The Results on a Map: ")
-st.map(final_results[school_option]) 
+st.map(final_results[school_option])
