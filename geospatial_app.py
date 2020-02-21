@@ -10,7 +10,7 @@ data_path = "school_coordinates.csv"
 
 st.title("ChanR Analytics Presents: Geospatial Exploration with Schools")
 
-nr = nearest_restaurants(f"{data_path}") 
+nr = nearest_restaurants(f"{data_path}")
 
 st.write("## Objectives: ")
 
@@ -20,7 +20,7 @@ st.write("- Visualizing Data on a Map")
 if st.button("Show School Data"):
     st.write(nr.df)
 
-st.write("### Using Google Maps API to search restaurants near your schools:")
+st.write("### Using Google Maps API to search places near your schools:")
 
 query = st.text_input(label="What kind of place do you want to search for?")
 st.write(f"You selected: {query}")
