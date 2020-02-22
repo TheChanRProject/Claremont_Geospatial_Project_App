@@ -10,7 +10,7 @@ class nearest_restaurants:
     def __init__(self, data_path):
         api_keys = ["AIzaSyBHWiHNgsyEL8IzkG42rcZYmqzjIXXHswE", "AIzaSyCWg8Nc_PHzUa3QFPDuiJZbTtduSR0Oy1o", "AIzaSyA6_WJ3FFz275fXDdUDqbfAoCeJv-MgU3M", "AIzaSyA-uUIEY9yQlMxLyB1VvClmccmh0UhAF1I", "AIzaSyBEY4QQTyrSpkQ7zh7cLTAarT1XT5n7-OM", "AIzaSyCHHKIsjkmyc7Gl-3FlwDwvriIdolBNxm0", "AIzaSyChA2jpAdVygHY3t2_JgIpLVPf5Slddc_4", "AIzaSyBOBMgIgASl-f_ti76DAHrIwQDXRkoOSAU"]
         self.data_path = data_path
-        self.key =
+        self.key = choice(api_keys)
         self.gmaps = googlemaps.Client(key = self.key)
         self.df = pd.read_csv(f"{self.data_path}")
 
